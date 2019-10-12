@@ -12,4 +12,6 @@ html_file.close()
 
 parsed_html=soup(page, "html.parser")
 
-#print(parsed_html)
+containers = parsed_html.findAll("div", {"class":"ncss-col-sm-12 full"})
+
+print(len(containers))
